@@ -1,0 +1,34 @@
+<div class="base-container">
+  <div class="page-content">
+    <div
+    class="welcome-animation-wrapper"
+    placement="right"
+    [ngbPopover]="animationDetails"
+    triggers="mouseenter:mouseleave">
+      <div id="welcome-animation"></div>
+    </div>
+    <div class="welcome-text">
+      <div class="welcome-text-header">Hello There!</div>
+      <div class="welcome-text-content">
+        {{ welcomeContent }}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<ng-template #animationDetails>
+<div class="popup-container">
+  <div class="popup-header">
+    {{ popup.header }}
+  </div>
+  <div class="popup-content">
+    {{ popup.content }}
+  </div>
+  <div class="author-details">
+    <div class="author-name">
+      {{ popup.author }}
+    </div>
+  </div>
+</div>
+</ng-template>
